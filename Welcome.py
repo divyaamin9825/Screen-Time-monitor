@@ -41,7 +41,9 @@ class ScreenTimeMonitor(tk.Tk):
         frame = self.frames[page_name]
         frame.tkraise()
     def delayshow_frame(self,page_name):
+        self.withdraw()
         time.sleep(10)
+        self.deiconify()
         frame = self.frames[page_name]
         frame.tkraise()
 class WelcomePage(tk.Frame):
